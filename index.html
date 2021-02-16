@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<body>
+  
+    <video id="background" autoplay muted loop>
+        <source src="media/videoplayback.mp4">
+    </video>
+<div id="header"></div>
+<img class="logo" src="media/te4logga.png">
+<p class="NTI">NTI GYMNASIUMET SKÖVDE</p>
+<p class="adress">Kylarvägen 1</p>
+<div id="line"></div>
+
+<i id="fb" class="fab fa-facebook-f icon"></i>
+<i id="ig" class="fab fa-instagram icon"></i>
+<i id="yt" class="fab fa-youtube icon"></i>
+<div id="container"></div>
+<div id="box"></div>
+<script type="text/babel">
+
+class Header extends React.Component{
+
+    render() {
+        const header ={
+            position: "absolute",
+            top: "0vh",
+            opacity: "0.85",
+            backgroundColor: "#1b1b1b",
+            width: "100vw",
+            height: "10vh"
+        };
+        return <div id="header" style={header}></div>
+    }
+}
+
+class SideMenu extends React.Component{
+
+render() {
+    const line ={
+        position: "absolute",
+        top: "55vh",
+        left: "3.1vw",
+        backgroundColor: "white",
+        width: "0.1vw",
+        height: "15vh"
+    };
+    
+    return <div id="line" style={line}></div>
+    }
+}
+
+class Container extends React.Component{
+
+render() {
+    const container ={
+        position: "absolute",
+        top: "100vh",
+        left: "0vw",
+        backgroundColor: "red",
+        width: "100vw",
+        height: "100vh"
+    };
+    
+    return <div id="container" style={container}></div>
+    }
+}
+
+ReactDOM.render(<Header />, document.getElementById('header'))
+ReactDOM.render(<SideMenu/>, document.getElementById('line'))
+ReactDOM.render(<Container/>, document.getElementById('container'))
+
+
+
+</script>
+<script src="menu.js"></script>
+</body>
+</html>

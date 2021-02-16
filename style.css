@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    width: 0vw;
+}
+#background{
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
+    width: 100%;
+    filter: brightness(0.35);
+}
+.logo{
+    position: absolute;
+    width: 15vw;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */	 
+}
+.NTI{
+    position: absolute;
+    top: 12.5vh;
+    left: 1.9vw;
+    font-size: 2vw;
+    letter-spacing: 0.1vw;
+     /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Marvel'; 
+    color: white;
+    user-select: none;
+}
+.adress{
+    position: absolute;
+    top: 19vh;
+    left: 1.9vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Marvel';
+    color: white;
+    user-select: none;
+}
+.icon{
+    position: absolute;
+    color: white;
+    left: 2.6vw;
+    top: 70vh;
+    font-size: 1.5vw;
+    user-select: none;
+}
+#fb{
+    top: 74vh;
+    margin-left: 0.1vw;
+    transition: 0.3s;
+}
+#ig{
+    top: 82vh;
+    margin-left: -0.125vw;
+    transition: 0.3s;
+}
+#yt{
+    top: 90vh;
+    margin-left: -0.3vw;
+    transition: 0.3s;
+}
+#fb:hover{
+    color: #4267B2;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+#ig:hover{
+    color: #8a3ab9;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+#yt:hover{
+    color: #FF0000;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+#box{
+    position: absolute;
+    top: 110vh;
+    width: 10vw;
+    height: 10vh;
+    background-color:yellow;
+    transition: 0.5s ease-in-out;
+}
