@@ -8,6 +8,7 @@ function scrollDetect(){
   
         if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300){
           document.getElementById("box").style.top = "100vh";
+          document.getElementById("background")
         }
       }
 

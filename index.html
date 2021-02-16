@@ -9,16 +9,17 @@
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 <body>
   
     <video id="background" autoplay muted loop>
-        <source src="media/videoplayback.mp4">
+        <source src="media/NTI.mp4">
     </video>
 <div id="header"></div>
-<img class="logo" src="media/te4logga.png">
-<p class="NTI">NTI GYMNASIUMET SKÖVDE</p>
+<!--<img class="logo" src="media/te4logga.png"> -->
+<p class="NTI">NTI GYMNASIET SKÖVDE</p>
 <p class="adress">Kylarvägen 1</p>
 <div id="line"></div>
 
@@ -27,6 +28,7 @@
 <i id="yt" class="fab fa-youtube icon"></i>
 <div id="container"></div>
 <div id="box"></div>
+<div id="secondContainer"></div>
 <script type="text/babel">
 
 class Header extends React.Component{
@@ -76,9 +78,68 @@ render() {
     }
 }
 
+class SecondContainer extends React.Component{
+
+    render() {
+        const secondContainer ={
+            position: "absolute",
+            top: "200vh",
+            left: "0vw",
+            backgroundColor: "#1b1b1b",
+            width: "100vw",
+            height: "100vh"
+        };
+        const secondBox ={
+            position: "absolute",
+            top: "32.5vh",
+            left: "6vw",
+            backgroundColor: "#26272c",
+            width: "88vw",
+            height: "5vh",
+        }
+        const thirdBox ={
+            position: "absolute",
+            top: "29.5vh",
+            left: "7vw",
+            backgroundColor: "#212227",
+            width: "86vw",
+            height: "3vh",
+        }
+        const thirdContainer ={
+            position: "absolute",
+            top: "37.5vh",
+            left: "5vw",
+            backgroundColor: "#26272c",
+            width: "90vw",
+            height: "60vh"
+        }
+        const text ={
+            fontSize: "0.9vw",
+        }
+        
+        return <div id="secondContainer" style={secondContainer}>
+            <p class="text" id="datalagring" style={text}>DATALAGRING</p>
+            <p class="text" id="examensarbete" style={text}>EXAMENSARBETE</p>
+            <p class="text" id="mjukvarudesign" style={text}>MJUKVARUDESIGN</p>
+            <p class="text" id="gip" style={text}>GIP</p>
+            <p class="text" id="mobile" style={text}>MOBILA APPLIKATIONER</p>
+            <p class="text" id="programmering" style={text}>PROGRAMMERING 3</p>
+            <p class="text" id="tillampad" style={text}>TILLÄMPAD PROGRAMMERING</p>
+            <p class="text" id="webbtjanster" style={text}>WEBBTJÄNSTER</p>
+            <div id="thirdBox" style={thirdBox}>
+                </div>
+            <div id="secondBox" style={secondBox}>
+                </div>
+                <div id="thirdContainer" style={thirdContainer}>
+                    </div>
+            </div>
+    }
+}
+
 ReactDOM.render(<Header />, document.getElementById('header'))
 ReactDOM.render(<SideMenu/>, document.getElementById('line'))
 ReactDOM.render(<Container/>, document.getElementById('container'))
+ReactDOM.render(<SecondContainer/>, document.getElementById('secondContainer'))
 
 
 
