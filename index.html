@@ -19,9 +19,8 @@
     </video>
 <div id="header"></div>
 <!--<img class="logo" src="media/te4logga.png"> -->
-<p class="NTI">NTI GYMNASIET SKÖVDE</p>
+<p class="NTI">NTI GYMNASIET SKÖVDE, TE4</p>
 <p class="adress">Kylarvägen 1</p>
-<div id="line"></div>
 
 <i id="fb" class="fab fa-facebook-f icon"></i>
 <i id="ig" class="fab fa-instagram icon"></i>
@@ -43,22 +42,6 @@ class Header extends React.Component{
             height: "10vh"
         };
         return <div id="header" style={header}></div>
-    }
-}
-
-class SideMenu extends React.Component{
-
-render() {
-    const line ={
-        position: "absolute",
-        top: "55vh",
-        left: "3.1vw",
-        backgroundColor: "white",
-        width: "0.1vw",
-        height: "15vh"
-    };
-    
-    return <div id="line" style={line}></div>
     }
 }
 
@@ -91,59 +74,74 @@ class SecondContainer extends React.Component{
         };
         const secondBox ={
             position: "absolute",
-            top: "32.5vh",
-            left: "6vw",
+            top: "22.5vh",
+            left: "4vw",
             backgroundColor: "#26272c",
-            width: "88vw",
-            height: "5vh",
+            width: "92vw",
+            height: "3vh",
         }
         const thirdBox ={
             position: "absolute",
-            top: "29.5vh",
-            left: "7vw",
-            backgroundColor: "#212227",
-            width: "86vw",
+            top: "20vh",
+            left: "5.5vw",
+            backgroundColor: "#26272c",
+            width: "89vw",
             height: "3vh",
         }
         const thirdContainer ={
             position: "absolute",
-            top: "37.5vh",
-            left: "5vw",
+            top: "25.5vh",
+            left: "2.5vw",
             backgroundColor: "#26272c",
-            width: "90vw",
-            height: "60vh"
-        }
-        const text ={
-            fontSize: "0.9vw",
+            width: "95vw",
+            height: "72vh"
         }
         
         return <div id="secondContainer" style={secondContainer}>
-            <p class="text" id="datalagring" style={text}>DATALAGRING</p>
-            <p class="text" id="examensarbete" style={text}>EXAMENSARBETE</p>
-            <p class="text" id="mjukvarudesign" style={text}>MJUKVARUDESIGN</p>
-            <p class="text" id="gip" style={text}>GIP</p>
-            <p class="text" id="mobile" style={text}>MOBILA APPLIKATIONER</p>
-            <p class="text" id="programmering" style={text}>PROGRAMMERING 3</p>
-            <p class="text" id="tillampad" style={text}>TILLÄMPAD PROGRAMMERING</p>
-            <p class="text" id="webbtjanster" style={text}>WEBBTJÄNSTER</p>
+            <p class="text" id="datalagring">DATALAGRING        
+                <p class="title" id="data">DATALAGRING, 100p</p>
+            </p>
+            <p class="text" id="examensarbete">EXAMENSARBETE
+                <p class="title" id="examen">EXAMENSARBETE, 100p</p>
+                </p>
+            <p class="text" id="mjukvarudesign">MJUKVARUDESIGN
+                <p class="title" id="mjukvaru">MJUKVARUDESIGN, 100p</p>
+                </p>
+            <p class="text" id="gip">GIP
+                <p class="title" id="gipen">GYMNASIEINGENJÖREN I PRAKTIKEN, 200p</p>
+            </p>
+            <p class="text" id="mobile">MOBILA APPLIKATIONER
+                <p class="title" id="mobil">MOBILA APPLIKATIONER, 100p</p>
+            </p>
+            <p class="text" id="programmering">PROGRAMMERING 3
+                <p class="title" id="program">PROGRAMMERING 3, 100p</p>
+                </p>
+            <p class="text" id="tillampad">TILLÄMPAD PROGRAMMERING
+                <p class="title" id="tillamp">TILLÄMPAD PROGRAMMERING, 100p</p>
+                </p>
+            <p class="text" id="webbtjanster">WEBBTJÄNSTER
+                <p class="title" id="webb">WEBBTJÄNSTER, 100p</p>
+                </p>
             <div id="thirdBox" style={thirdBox}>
                 </div>
             <div id="secondBox" style={secondBox}>
                 </div>
                 <div id="thirdContainer" style={thirdContainer}>
+
                     </div>
             </div>
     }
 }
 
 ReactDOM.render(<Header />, document.getElementById('header'))
-ReactDOM.render(<SideMenu/>, document.getElementById('line'))
+
 ReactDOM.render(<Container/>, document.getElementById('container'))
 ReactDOM.render(<SecondContainer/>, document.getElementById('secondContainer'))
 
 
 
 </script>
-<script src="menu.js"></script>
+<script src="Toggle.js"></script>
+<!--<script src="onClick.js"></script> -->
 </body>
 </html>
